@@ -2,9 +2,20 @@ import { createRouter, createWebHistory } from "vue-router"; // cài vue-router:
 
 const routes = [
     // {
-    //     path : '/',
-    //     component: ()=>import('../layout/wrapper/index.vue')
+    //     path: '/admin',
+    //     component: () => import('../layout/wrapper/Admin.vue'),
+    //     meta: { layout: 'default' },
     // },
+    {
+        path: '/admin/user',
+        component: () => import('../components/Admin/DanhMuc/index.vue'),
+        meta: { layout: 'default' },
+    },
+    {
+        path: '/admin/caidat',
+        component: () => import('../components/Admin/Caidat/index.vue'),
+        meta: { layout: 'default' },
+    },
 ]
 
 const router = createRouter({
